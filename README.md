@@ -3,7 +3,7 @@
 ## Description
 A productivity web app where you can sign up, sign in and create your perfect productivity board. Everything will be there for you and you can drag and drop new productivity features to your dashboard
 ## Technologies
-React / NodeJS / MongoDB / Javascript / StyledComponents / HTML 
+NextJS / NodeJS / MongoDB / Javascript / StyledComponents / HTML 
 
 ## Milestones
 Project will have 5 milestones to complete before April 15th
