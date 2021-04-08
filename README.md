@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Revo
 
-## Getting Started
+## Description
+A productivity web app where you can sign up, sign in and create your perfect productivity board. Everything will be there for you and you can drag and drop new productivity features to your dashboard
+## Technologies
+React / NodeJS / MongoDB / Javascript / StyledComponents / HTML 
 
-First, run the development server:
+## Milestones
+Project will have 5 milestones to complete before April 15th
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Milestone 1 
+* Basic Setup Backend Frontend
+* Research packages for productivity widgets
+* BackEnd/Auth
+    * Login
+    * Register
+    * Habits
+* UI Front End
+    * Login
+    * Register
+    * Dashboard
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Milestone 2 
+* Pop up info for Users after signing up
+* Questionnaire upon signup
+* Create Habits Widget
+    * Allow habits widget to be dragged and dropped
+    * Have User be able to enter in new habits and track for 60 day period for 'new' habits using bar
+    * Have user be able to enter in current habits and track consistantly using calendar
+    * upon clicking widget go to specific habit page
+### Milestone 3
+* Start seperate habit page to include what is in the dashboard
+* Have option for dashboard metrics rather than the item itself
+* Add option for new simple widgets such as Pomodoro Timer, Journal and water tracker
+### Milestone 4 
+* Add notifications for users to track or do something
+* Add more complex widgets such as meditation and goals 
+### Milestone 5 
+* Clean up UI for really smooth customer experience
+* Tackle any bugs that have come up in milestones 1,2, 3 and 4
+* Extra design features, make sure everything is mobile and desktop usable
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Design
+Figma Images coming soon!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Installation
+No need for installation please visit website
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Requirments
 
-## Learn More
+### Functional
+* Users login/Logout/Auth
+* Can create a habit and have it able to track
 
-To learn more about Next.js, take a look at the following resources:
+### Non Functional
+* Preformance
+* Security
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+* More Widgets to add
+* More information
+More information
+Daily Action => Habits => Goals(Short term or long term) Becoming the best person you can be through action and tracking. What do you want to acheive, what have you always wanted to do. Integration with other apps?
