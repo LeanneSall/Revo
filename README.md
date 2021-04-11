@@ -1,65 +1,53 @@
-# Revo
+---
 
-## Description
-A productivity web app where you can sign up, sign in and create your perfect productivity board. Everything will be there for you and you can drag and drop new productivity features to your dashboard
-## Technologies
-NextJS / NodeJS / MongoDB / Javascript / StyledComponents / HTML 
+# Svelte PWA
 
-## Milestones
-Project will have 5 milestones to complete before April 15th
+This is a Progressive Web App (PWA) template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/tretapey/svelte-pwa.
 
-### Milestone 1 
-* Basic Setup Backend Frontend
-* Research packages for productivity widgets
-* BackEnd/Auth
-    * Login
-    * Register
-    * Habits
-* UI Front End
-    * Login
-    * Register
-    * Dashboard
+To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
-### Milestone 2 
-* Pop up info for Users after signing up
-* Questionnaire upon signup
-* Create Habits Widget
-    * Allow habits widget to be dragged and dropped
-    * Have User be able to enter in new habits and track for 60 day period for 'new' habits using bar
-    * Have user be able to enter in current habits and track consistantly using calendar
-    * upon clicking widget go to specific habit page
-### Milestone 3
-* Start seperate habit page to include what is in the dashboard
-* Have option for dashboard metrics rather than the item itself
-* Add option for new simple widgets such as Pomodoro Timer, Journal and water tracker
-### Milestone 4 
-* Add notifications for users to track or do something
-* Add more complex widgets such as meditation and goals 
-### Milestone 5 
-* Clean up UI for really smooth customer experience
-* Tackle any bugs that have come up in milestones 1,2, 3 and 4
-* Extra design features, make sure everything is mobile and desktop usable
+```bash
+npx degit tretapey/svelte-pwa my-svelte-pwa
+cd my-svelte-pwa
+```
 
-## Design
-Figma Images coming soon!
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-## Installation
-No need for installation please visit website
 
-## Requirments
+## Get started
 
-### Functional
-* Users login/Logout/Auth
-* Can create a habit and have it able to track
+Install the dependencies...
 
-### Non Functional
-* Preformance
-* Security
+```bash
+cd my-svelte-pwa
+npm install
+```
 
-## Features
-* More Widgets to add
-* More information
-More information
-Daily Action => Habits => Goals(Short term or long term) Becoming the best person you can be through action and tracking. What do you want to acheive, what have you always wanted to do. Integration with other apps?
+...then start [Rollup](https://rollupjs.org):
 
-[Color Pallette](https://coolors.co/333333-b8b8b8-ebebeb-1e9999-dd2c2c)
+```bash
+npm run dev
+```
+
+Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+
+
+## PWA Configuration
+
+- The `service-worker.js` and `manifest.json` files are in the `public` folder.
+- You should update the icons in `/public/images/icons`
+- For an offline experience edit the `/public/offline.html` file.
+- This PWA is installable, the `/public/scripts/install.js` file has the install configuration. You should change the app name in the `logAppInstalled` function.
+    Note: If you don't want to make the app installable you can remove the script from the `index.html` file in the `public` folder.
+    
+For more info, this template was made following this [tutorial](https://codelabs.developers.google.com/codelabs/your-first-pwapp)
+ 
+## Building and running in production mode
+
+To create an optimised version of the app:
+
+```bash
+npm run build
+```

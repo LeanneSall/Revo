@@ -1,24 +1,21 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
-  "private": true,
+  "name": "svelte-pwa-template",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^7.0.1",
+    "svelte": "^3.0.0"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "dotenv": "^8.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.6.6",
-    "mongoose": "^5.12.3",
-    "next": "10.0.5",
-    "next-auth": "^3.14.0",
-    "next-connect": "^0.10.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "ssri": "8.0.1",
-    "styled-components": "^5.2.3"
+    "sirv-cli": "^0.4.4"
   }
 }
