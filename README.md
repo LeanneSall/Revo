@@ -6,7 +6,7 @@ A productivity web app where you can sign up, sign in and create your perfect pr
 
 ## Technologies
 
-NextJS / NodeJS / MongoDB / Javascript / StyledComponents / HTML
+ReactJS / NodeJS / MongoDB / Javascript / StyledComponents / HTML
 
 ## Milestones
 
