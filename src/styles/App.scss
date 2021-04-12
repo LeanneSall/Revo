@@ -1,0 +1,11 @@
+@import "mixins";
+@import "landing";
+
+@font-face {
+  font-family: "questrial";
+  src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: "questrial" !important;
+}

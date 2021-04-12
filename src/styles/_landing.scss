@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "sparose";
+  src: local("sparose"), url(./fonts/sparose.ttf) format("truetype");
+}
+@font-face {
+  font-family: "questrial";
+  src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
+}
+
+* {
+  padding: 0.3rem;
+  //background-color: #ebebeb;
+  color: #333333;
+}
+
+h1 {
+  font-family: "sparose" !important;
+  color: #dd2c2c;
+}
+
+h4 {
+  color: #333333;
+}
+h5 {
+  color: #767676;
+}
+
+Button {
+  @include primary-btn;
+  margin-bottom: 0.5rem !important;
+}
+
+a {
+  margin-top: 2rem !important;
+}
