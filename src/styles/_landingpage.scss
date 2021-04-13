@@ -13,6 +13,13 @@
   color: #333333;
 }
 
+.img {
+  padding-left: 5rem;
+  @media (max-width: 500px) {
+    padding: 0;
+  }
+}
+
 h1 {
   font-family: "sparose" !important;
   color: #dd2c2c;
@@ -25,7 +32,7 @@ h5 {
   color: #767676;
 }
 
-Button {
+.signup-btn {
   @include primary-btn;
   margin-bottom: 0.5rem !important;
 }

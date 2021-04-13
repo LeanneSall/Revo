@@ -1,6 +1,8 @@
 @import "mixins";
-@import "landing";
-
+@import "landingpage";
+@import "dashboard";
+@import "nav";
+@import "widgets";
 @font-face {
   font-family: "questrial";
   src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
@@ -8,4 +10,11 @@
 
 * {
   font-family: "questrial" !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

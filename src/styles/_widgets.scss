@@ -1,0 +1,18 @@
+.MuiPaper-root {
+  height: 10rem;
+  margin: 0.2rem;
+  width: 8rem;
+  justify-content: space-evenly;
+}
+
+.MuiGrid-root {
+  justify-content: space-evenly;
+
+  &:nth-child(even) {
+    margin-top: 1rem;
+  }
+}
+
+.MuiContainer-root {
+  margin-bottom: 5rem;
+}

@@ -1,22 +1,21 @@
-import { Button, Container, Paper } from "@material-ui/core";
+import { Button, Container, Paper, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import AddIcon from "@material-ui/icons/Add";
 import firebase from "firebase/app";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import "firebase/auth";
+import Widgets from "../components/dashboard/widgets";
+import ButtonAppBar from "../components/dashboard/nav";
+import BottomNav from "../components/dashboard/bottomNav";
+import { isMobile } from "react-device-detect";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
-    display: "flex",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
+    //height: "90vh",
   },
-}));
+});
 
 const Dashboard = () => {
   const history = useHistory();
@@ -26,18 +25,34 @@ const Dashboard = () => {
     history.push("/");
   };
 
+  const topNav = () => {
+    if (!isMobile) {
+      return <ButtonAppBar />;
+    }
+  };
+
+  const bottomNav = () => {
+    if (isMobile) {
+      return <BottomNav />;
+    }
+  };
+
+  const bottomHeader = () => {
+    if (isMobile) {
+      return <h1 className="header">Dashboard</h1>;
+    }
+  };
+
   const classes = useStyles();
+
   return (
     <>
-      <h1>Dashboard</h1>
+      {topNav()}
+      {bottomHeader()}
       <Container className={classes.root}>
-        //link to widgets as papers
-        <Paper elevation={3} />
-        <Paper elevation={3} />
-        <Paper elevation={3} />
-        //have bottom nav as android or hamburger for ios
+        <Widgets />
       </Container>
-      //Add add button at bottom of screen to add more widgets
+      {bottomNav()}
     </>
   );
 };
