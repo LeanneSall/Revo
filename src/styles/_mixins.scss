@@ -1,0 +1,16 @@
+@mixin primary-btn {
+  background-color: #dd2c2c !important;
+  border-radius: 20px !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+  .MuiButton-label {
+    color: white;
+    font-size: larger;
+  }
+}
+
+@mixin add-btn {
+  border-radius: 50%;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+}

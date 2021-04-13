@@ -73,7 +73,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            onChange={(e) => setEmail(e)}
+            onChange={(e) => setEmail(e.target.value)}
             label="Email Address"
             name="email"
             autoComplete="email"
@@ -84,7 +84,7 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            onChange={(e) => setPassword(e)}
+            onChange={(e) => setPassword(e.target.value)}
             name="password"
             label="Password"
             type="password"

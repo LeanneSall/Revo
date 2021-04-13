@@ -1,9 +1,12 @@
 import React from "react";
+import LandingPage from "../components/landing";
+import { useHistory } from "react-router-dom";
 
 const Landing = () => {
+  const history = useHistory();
   return (
     <div>
-      <h1>Landing Page</h1>
+      <LandingPage data={history} />
     </div>
   );
 };
