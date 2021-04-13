@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "sparose";
+  src: local("sparose"), url(./fonts/sparose.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "questrial";
+  src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
+}
+
+* {
+  padding: 0.3rem;
+  color: #333333;
+}
+
+.img {
+  padding-left: 5rem;
+}
+
+@media (max-width: 500px) {
+  .img {
+    padding: 0;
+  }
+}
+
+h1 {
+  font-family: "sparose" !important;
+  color: #dd2c2c;
+}
+
+h4 {
+  color: #333333;
+}
+
+h5 {
+  color: #767676;
+}
+
+.Button {
+  background-color: #dd2c2c !important;
+  border-radius: 20px !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+}
+
+.Button .MuiButton-label {
+  color: white;
+  font-size: larger;
+}
+
+a {
+  margin-top: 2rem !important;
+}
+
+.btn-dash {
+  border-radius: 50%;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  position: absolute;
+  top: 7rem;
+  left: 5rem;
+}
+
+.nav {
+  display: flex;
+  width: 100% !important;
+}
+
+.nav .content-nav {
+  align-items: flex-end;
+  flex-direction: row !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wide {
+  width: 100% !important;
+}
+
+.MuiToolbar-root {
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: none;
+}
+
+.Container {
+  display: flex;
+}
+
+.header {
+  padding-bottom: 1rem;
+}
+
+.MuiPaper-elevation4 {
+  box-shadow: none !important;
+}
+
+#nav-bar {
+  background-color: white;
+}
+
+.MuiPaper-root {
+  height: 10rem;
+  margin: 0.2rem;
+  justify-content: space-evenly;
+}
+
+.MuiGrid-root {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.MuiGrid-root:nth-child(even) {
+  margin-top: 3rem;
+}
+
+@media (max-width: 760px) {
+  .MuiGrid-root {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  .MuiGrid-root:nth-child(even) {
+    margin-top: 0;
+  }
+}
+
+#stick {
+  position: fixed;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  bottom: 0;
+  z-index: 2;
+  right: 0;
+  background-color: #1e9999;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 760px) {
+  #container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.MuiContainer-root {
+  margin-bottom: 5rem;
+}
+
+@font-face {
+  font-family: "questrial";
+  src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: "questrial" !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/*# sourceMappingURL=App.css.map */
