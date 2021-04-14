@@ -1,44 +1,42 @@
-import React from "react";
+// import React, { useState, useEffect, useContext, createContext } from "react";
+// import { auth } from "../config/firebase";
+// import { useHistory } from "react-router-dom";
+// import "firebase/auth";
+// import fireStart from "../config/firebase";
+// //initialize firestore
 
-import React, { useState, useEffect, useContext, createContext } from "react";
-import { auth } from "../config/firebase";
-import { useHistory } from "react-router-dom";
-import "firebase/auth";
-import fireStart from "../config/firebase";
-//initialize firestore
+// //create context
+// const WidgetContext = createContext();
 
-//create context
-const WidgetContext = createContext();
+// export const useWidgets = () => {
+//   return useContext(WidgetContext);
+// };
 
-export const useWidgets = () => {
-  return useContext(WidgetContext);
-};
+// export default function WidgetProvider({ children }) {
+//   const [currentUser, setCurrentUser] = useState();
+//   const [loading, setLoading] = useState(true);
 
-export default function WidgetProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState();
-  const [loading, setLoading] = useState(true);
+//   //---------------Habits------------------
 
-  //---------------Habits------------------
+//   const getUserHabits = () => {};
 
-  const getUserHabits = () => {};
+//   const createNewHabit = () => {};
 
-  const createNewHabit = () => {};
+//   const updateHabit = () => {};
 
-  const updateHabit = () => {};
+//   const deleteHabit = () => {};
 
-  const deleteHabit = () => {};
+//   //---------------WaterIntake------------------
 
-  //---------------WaterIntake------------------
-
-  const habits = {
-    getUserHabits,
-    createNewHabit,
-    updateHabit,
-    deleteHabit,
-  };
-  return (
-    <WidgetContext.Provider value={value}>
-      {!loading && children}
-    </WidgetContext.Provider>
-  );
-}
+//   const habits = {
+//     getUserHabits,
+//     createNewHabit,
+//     updateHabit,
+//     deleteHabit,
+//   };
+//   return (
+//     <WidgetContext.Provider value={value}>
+//       {!loading && children}
+//     </WidgetContext.Provider>
+//   );
+// }

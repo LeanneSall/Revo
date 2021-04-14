@@ -15,7 +15,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { useAuth } from "../hooks/useAuth";
 import { useHistory } from "react-router";
+import axios from "axios";
 import firebase from "firebase/app";
+import { CompareSharp } from "@material-ui/icons";
 
 const SignUp = () => {
   const [fName, setfName] = React.useState("");
@@ -23,6 +25,7 @@ const SignUp = () => {
   const [email, setEmail] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const [password, setPassword] = React.useState("");
+  const [user, setUser] = React.useState({});
   const history = useHistory();
   const { signup } = useAuth();
 
@@ -31,11 +34,34 @@ const SignUp = () => {
     try {
       setLoading(true);
       await signup(email, password);
-      history.push("/dashboard");
     } catch (e) {
       console.error(e);
     }
+    try {
+      toMongo();
+      history.push("/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
     setLoading(false);
+  };
+
+  const toMongo = async () => {
+    const mongoUser = firebase.auth().currentUser.uid;
+    try {
+      await axios
+        .post(`http://localhost:5000/api/user/register`, {
+          _id: mongoUser,
+          firstName: fName,
+          lastName: lName,
+        })
+        .then((res) => {
+          console.log(res);
+          console.log(res.data);
+        });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const useStyles = makeStyles((theme) => ({
@@ -77,6 +103,7 @@ const SignUp = () => {
                 autoComplete="fname"
                 name="firstName"
                 variant="outlined"
+                onChange={(e) => setfName(e.target.value)}
                 required
                 fullWidth
                 id="firstName"
@@ -89,6 +116,7 @@ const SignUp = () => {
                 variant="outlined"
                 required
                 fullWidth
+                onChange={(e) => setlName(e.target.value)}
                 id="lastName"
                 label="Last Name"
                 name="lastName"
