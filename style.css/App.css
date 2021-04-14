@@ -112,6 +112,16 @@ h1 {
   background-size: cover;
 }
 
+#journal {
+  background-image: url("../images/Journal.svg") !important;
+  background-size: cover;
+}
+
+#water {
+  background-image: url("../images/WaterIntake.svg") !important;
+  background-size: cover;
+}
+
 .MuiGrid-root {
   justify-content: space-evenly;
   width: 100%;

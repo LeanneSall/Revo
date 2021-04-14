@@ -29,28 +29,14 @@ const Dashboard = () => {
     }
   };
 
-  const bottomNav = () => {
-    if (isMobile) {
-      return <BottomNav />;
-    }
-  };
-
-  const bottomHeader = () => {
-    if (isMobile) {
-      return <h1 className="header">Dashboard</h1>;
-    }
-  };
-
   const classes = useStyles();
 
   return (
     <>
-      {topNav()}
-      {bottomHeader()}
       <Container className={classes.root}>
+        {topNav()}
         <Widgets />
       </Container>
-      {bottomNav()}
     </>
   );
 };
