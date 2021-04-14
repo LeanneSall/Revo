@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "firebase": "^8.3.3",
+    "material-ui-popup-state": "^1.8.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-device-detect": "^1.17.0",

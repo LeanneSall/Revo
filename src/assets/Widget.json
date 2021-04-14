@@ -1,0 +1,12 @@
+{
+  "HabitWidget": {
+    "id": 1,
+    "src": "../../images/HabitTracker.svg"
+  },
+  "WaterWidget": {
+    "id": 2
+  },
+  "JournalWidget": {
+    "id": 3
+  }
+}

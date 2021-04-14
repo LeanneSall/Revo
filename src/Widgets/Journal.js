@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function WaterIntake() {
+export default function Journal() {
   return <div></div>;
 }
