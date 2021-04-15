@@ -6,8 +6,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
 import AddIcon from "@material-ui/icons/Add";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { useAddWidget } from "../../hooks/addWidget";
 import { useAuth } from "../../hooks/useAuth";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 export default function GrabWidget({ i }) {
@@ -16,14 +16,28 @@ export default function GrabWidget({ i }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [loading, setLoading] = useState(true);
   const open = Boolean(anchorEl);
-  const [pickId, setPickId] = useState();
-  const { getUserWidgets } = useAddWidget();
+  const [link, setLink] = useState("");
   const { currentUser } = useAuth();
   const [grabData, setGrabData] = useState({});
   const uid = currentUser.uid;
   const [widgets, setWidgets] = useState([]);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+  };
+  const history = useHistory();
+
+  const whichClick = (i) => {
+    switch (i) {
+      case 1:
+        return "/habits";
+
+      case 2:
+        return "/habits";
+
+      case 3:
+        setLink("/habits");
+        return link;
+    }
   };
 
   return (
@@ -32,7 +46,7 @@ export default function GrabWidget({ i }) {
         key={i}
         elevation={3}
         id={"hi" + i.toString()}
-        onClick={() => alert("hello")}
+        onClick={() => history.push(whichClick(i))}
       ></Paper>
     </Grid>
   );

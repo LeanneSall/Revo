@@ -10,6 +10,7 @@ import firebase from "firebase/app";
 import { AuthProvider } from "./hooks/useAuth";
 import { AddProvider } from "./hooks/addWidget";
 import fireStart from "./config/firebase";
+import UserHabits from "./pages/UserHabits";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
 
       <Router>
         <Switch>
-          <AddProvider>
-            <PrivateRoute path="/dashboard">
-              <Dashboard />
-            </PrivateRoute>
-          </AddProvider>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/habits">
+            <UserHabits />
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
