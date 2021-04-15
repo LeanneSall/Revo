@@ -11,6 +11,7 @@ import { AuthProvider } from "./hooks/useAuth";
 import { AddProvider } from "./hooks/addWidget";
 import fireStart from "./config/firebase";
 import UserHabits from "./pages/UserHabits";
+import UserJournal from "./pages/UserJournal";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/habits">
             <UserHabits />
+          </PrivateRoute>
+          <PrivateRoute path="/journal">
+            <UserJournal />
           </PrivateRoute>
           <Route path="/login">
             <Login />

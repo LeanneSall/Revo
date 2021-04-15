@@ -32,11 +32,10 @@ export default function GrabWidget({ i }) {
         return "/habits";
 
       case 2:
-        return "/habits";
+        return "/journal";
 
       case 3:
-        setLink("/habits");
-        return link;
+        return "/water";
     }
   };
 

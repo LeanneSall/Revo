@@ -28,7 +28,7 @@ export default function Tracking() {
   return (
     <>
       <Container>
-        <Nav />
+        <Nav i={"Your Habits"} />
         {getData.map((props) => {
           return (
             <Container>

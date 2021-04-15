@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import "firebase/auth";
 import Widgets from "../components/dashboard/widgets";
-import ButtonAppBar from "../components/dashboard/nav";
+import Nav from "../components/dashboard/nav";
 import BottomNav from "../components/dashboard/bottomNav";
 import { isMobile } from "react-device-detect";
 
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   const topNav = () => {
     if (!isMobile) {
-      return <ButtonAppBar />;
+      return <Nav i={"Dashboard"} />;
     }
   };
 
