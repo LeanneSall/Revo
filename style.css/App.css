@@ -101,25 +101,25 @@ h1 {
   background-color: white;
 }
 
-.MuiPaper-root {
-  height: 10rem;
-  margin: 0.2rem;
-  justify-content: space-evenly;
-}
-
-#paper {
+#hi1 {
   background-image: url("../images/HabitTracker.svg") !important;
   background-size: cover;
 }
 
-#journal {
+#hi2 {
   background-image: url("../images/Journal.svg") !important;
   background-size: cover;
 }
 
-#water {
+#hi3 {
   background-image: url("../images/WaterIntake.svg") !important;
   background-size: cover;
+}
+
+.MuiPaper-root {
+  height: 10rem;
+  margin: 0.2rem;
+  justify-content: space-evenly;
 }
 
 .MuiGrid-root {
@@ -131,6 +131,21 @@ h1 {
 
 .MuiGrid-root:nth-child(even) {
   margin-top: 3rem;
+}
+
+.MuiGrid-root #1hi {
+  background-image: url("../images/HabitTracker.svg") !important;
+  background-size: cover;
+}
+
+.MuiGrid-root #2hi {
+  background-image: url("../images/Journal.svg") !important;
+  background-size: cover;
+}
+
+.MuiGrid-root #3hi {
+  background-image: url("../images/WaterIntake.svg") !important;
+  background-size: cover;
 }
 
 @media (max-width: 760px) {

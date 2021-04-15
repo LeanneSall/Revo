@@ -8,18 +8,21 @@ import Register from "./pages/Register";
 import Landing from "./pages/Landing";
 import firebase from "firebase/app";
 import { AuthProvider } from "./hooks/useAuth";
-// import { WidgetProvider } from "./hooks/useWidget";
+import { AddProvider } from "./hooks/addWidget";
 import fireStart from "./config/firebase";
 
 function App() {
   return (
     <AuthProvider>
       {/* <WidgetProvider> */}
+
       <Router>
         <Switch>
-          <PrivateRoute path="/dashboard">
-            <Dashboard />
-          </PrivateRoute>
+          <AddProvider>
+            <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
+          </AddProvider>
           <Route path="/login">
             <Login />
           </Route>
