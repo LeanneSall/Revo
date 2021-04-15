@@ -28,7 +28,6 @@ export default function Widgets() {
   const [loading, setLoading] = useState(true);
   const open = Boolean(anchorEl);
   const [pickId, setPickId] = useState();
-  const { getUserWidgets } = useAddWidget();
   const { currentUser } = useAuth();
   const [grabData, setGrabData] = useState({});
   const uid = currentUser.uid;
