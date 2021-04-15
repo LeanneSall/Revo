@@ -1,15 +1,61 @@
 .MuiPaper-root {
   height: 10rem;
   margin: 0.2rem;
-  width: 8rem;
+
   justify-content: space-evenly;
 }
 
 .MuiGrid-root {
   justify-content: space-evenly;
-
+  width: 100%;
+  padding: 2rem;
+  cursor: pointer;
   &:nth-child(even) {
-    margin-top: 1rem;
+    margin-top: 3rem;
+  }
+  #1hi {
+    background-image: url("../images/HabitTracker.svg") !important;
+    background-size: cover;
+  }
+
+  #2hi {
+    background-image: url("../images/Journal.svg") !important;
+    background-size: cover;
+  }
+
+  #3hi {
+    background-image: url("../images/WaterIntake.svg") !important;
+    background-size: cover;
+  }
+
+  @media (max-width: 760px) {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+
+    &:nth-child(even) {
+      margin-top: 0;
+    }
+  }
+}
+
+#stick {
+  position: fixed;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  bottom: 0;
+  z-index: 2;
+  right: 0;
+  background-color: #1e9999;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  padding: 2rem 2rem 2rem 2rem;
+  @media (max-width: 760px) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 

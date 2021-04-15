@@ -3,6 +3,9 @@ import { Container, Typography, Button, Link } from "@material-ui/core";
 import adventure from "../images/adventure.svg";
 
 export default function LandingPage({ data }) {
+  const style = {
+    backgroundColor: "#dd2c2c;",
+  };
   return (
     <Container maxWidth="sm">
       <Typography variant="h1" align="center">
@@ -18,7 +21,7 @@ export default function LandingPage({ data }) {
         Revolutionize Your Life
       </Typography>
       <Button
-        className="signup-btn"
+        className="Button"
         onClick={() => data.push("/register")}
         variant="contained"
       >

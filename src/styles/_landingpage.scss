@@ -32,9 +32,15 @@ h5 {
   color: #767676;
 }
 
-.signup-btn {
-  @include primary-btn;
-  margin-bottom: 0.5rem !important;
+.Button {
+  background-color: #dd2c2c !important;
+  border-radius: 20px !important;
+  margin-top: 2rem !important;
+  width: 100% !important;
+  .MuiButton-label {
+    color: white;
+    font-size: larger;
+  }
 }
 
 a {

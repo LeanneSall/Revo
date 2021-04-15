@@ -1,7 +1,5 @@
 import { Button, Container, Paper, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import AddIcon from "@material-ui/icons/Add";
-import firebase from "firebase/app";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
@@ -31,28 +29,14 @@ const Dashboard = () => {
     }
   };
 
-  const bottomNav = () => {
-    if (isMobile) {
-      return <BottomNav />;
-    }
-  };
-
-  const bottomHeader = () => {
-    if (isMobile) {
-      return <h1 className="header">Dashboard</h1>;
-    }
-  };
-
   const classes = useStyles();
 
   return (
     <>
-      {topNav()}
-      {bottomHeader()}
       <Container className={classes.root}>
+        {topNav()}
         <Widgets />
       </Container>
-      {bottomNav()}
     </>
   );
 };
