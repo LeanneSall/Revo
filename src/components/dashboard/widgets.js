@@ -52,7 +52,7 @@ export default function Widgets() {
       <Container id="container">
         <Grid container>
           {widgets.map((props) => (
-            <GrabWidget i={props} />
+            <GrabWidget i={props} key={1 + props} />
           ))}
         </Grid>
         <div>

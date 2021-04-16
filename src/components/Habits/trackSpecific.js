@@ -4,9 +4,6 @@ import {
   TextField,
   FormControl,
   Button,
-  InputLabel,
-  Input,
-  FormHelperText,
   Container,
 } from "@material-ui/core";
 import Nav from "../../components/dashboard/nav";
@@ -20,7 +17,6 @@ const useStyles = makeStyles({
     textAlign: "center",
     padding: "1rem 5rem 3rem 3rem",
     marginBottom: "5rem",
-    textAlign: "center",
   },
   name: {
     marginBottom: "2rem",

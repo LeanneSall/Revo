@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Button, Modal, Container, Paper, Typography } from "@material-ui/core";
+import { Button, Container, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import TrackBar from "./trackBar";
 import { useAuth } from "../../hooks/useAuth";
@@ -21,7 +21,6 @@ export default function Tracking() {
   const history = useHistory();
   const classes = useStyles();
 
-  const [open, setOpen] = React.useState(false);
   useEffect(async () => {
     await axios
       .get(`http://localhost:5000/api/habit/currentHabits/${uid}`)
