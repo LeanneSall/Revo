@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function TrackBar(i) {
-  const Fill = (props) => {
-    return <div className="Name" style={{ width: `${props.percentage}%` }} />;
+export default function TrackBar({ i }) {
+  const Fill = () => {
+    console.log(i);
+    return <div className="days" style={{ width: `${(i / 60) * 100}%` }} />;
   };
 
   return (

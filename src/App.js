@@ -8,10 +8,12 @@ import Register from "./pages/Register";
 import Landing from "./pages/Landing";
 import firebase from "firebase/app";
 import { AuthProvider } from "./hooks/useAuth";
-import { AddProvider } from "./hooks/addWidget";
 import fireStart from "./config/firebase";
 import UserHabits from "./pages/UserHabits";
 import UserJournal from "./pages/UserJournal";
+import UserWater from "./pages/UserWater";
+import TrackSpecific from "./components/Habits/trackSpecific";
+import NewJournal from "./components/Journal/newJournal";
 
 function App() {
   return (
@@ -28,6 +30,15 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/journal">
             <UserJournal />
+          </PrivateRoute>
+          <PrivateRoute path="/water">
+            <UserWater />
+          </PrivateRoute>
+          <PrivateRoute path="/new">
+            <TrackSpecific />
+          </PrivateRoute>
+          <PrivateRoute path="/newj">
+            <NewJournal />
           </PrivateRoute>
           <Route path="/login">
             <Login />

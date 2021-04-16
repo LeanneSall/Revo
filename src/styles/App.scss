@@ -4,7 +4,11 @@
 @import "nav";
 @import "grabWidgets";
 @import "widgets";
+@import "tracking";
 @import "trackBar";
+@import "displayJournal";
+@import "trackSpecific";
+
 @font-face {
   font-family: "questrial";
   src: local("questrial"), url(./fonts/Questrial-Regular.ttf) format("truetype");
@@ -19,4 +23,5 @@
 body {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  background-color: #fafafa;
 }

@@ -1,0 +1,20 @@
+#outerCon {
+  background-color: white;
+  padding: 2rem;
+
+  #innerCon {
+    text-align: center;
+
+    h5 {
+      text-align: left;
+    }
+
+    h4 {
+      padding-bottom: 1rem;
+    }
+
+    Button {
+      margin-top: 2rem;
+    }
+  }
+}

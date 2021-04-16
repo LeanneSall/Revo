@@ -12,6 +12,7 @@ import { isMobile } from "react-device-detect";
 const useStyles = makeStyles({
   root: {
     //height: "90vh",
+    backgroundColor: "#FAFAFA",
   },
 });
 
@@ -33,7 +34,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Container className={classes.root}>
+      <Container classes={classes.root}>
         {topNav()}
         <Widgets />
       </Container>

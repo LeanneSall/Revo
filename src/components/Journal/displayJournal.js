@@ -1,11 +1,21 @@
-import { Container, Paper, Typography } from "@material-ui/core";
+import { Container, Paper, Typography, Button } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../../hooks/useAuth";
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 import axios from "axios";
+
+const useStyles = makeStyles({
+  root: {
+    padding: "1rem 5rem 3rem 3rem",
+    marginBottom: "5rem",
+  },
+});
 
 export default function DisplayJournal() {
   const [getData, setGetData] = useState([]);
-
+  const history = useHistory();
+  const classes = useStyles();
   const { currentUser } = useAuth();
   const uid = currentUser.uid;
 
@@ -18,16 +28,24 @@ export default function DisplayJournal() {
     console.log(getData);
   }, []);
 
+  const del = async (i) => {
+    await axios.delete(`http://localhost:5000/api/journal/${i}`).then((io) => {
+      console.log(io);
+    });
+  };
+
   return (
-    <Container>
-      <Container>
+    <Container id="outerCon">
+      <Button onClick={() => history.push("/newj")}>Add New Journal?</Button>
+      <Container id="innerCon">
         {getData ? (
           getData.map((prop) => {
             return (
-              <Paper>
+              <Paper className={classes.root}>
                 <Typography variant="h5">{prop.date}</Typography>
-                <Typography variant="h5">{prop.title}</Typography>
+                <Typography variant="h4">{prop.title}</Typography>
                 <Typography variant="body1">{prop.entry}</Typography>
+                <Button onClick={(e) => del(prop._id)}>Delete?</Button>
               </Paper>
             );
           })

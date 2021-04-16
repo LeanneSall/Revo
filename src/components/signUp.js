@@ -73,7 +73,11 @@ const SignUp = () => {
     },
     avatar: {
       margin: theme.spacing(1),
+      marginBottom: "1rem",
       backgroundColor: theme.palette.secondary.main,
+    },
+    header: {
+      marginBottom: "1rem",
     },
     form: {
       width: "100%", // Fix IE 11 issue.
@@ -81,6 +85,11 @@ const SignUp = () => {
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
+      backgroundColor: "#dd2c2c",
+      borderRadius: "20px",
+      marginTop: "2rem",
+
+      color: "white",
     },
   }));
 
@@ -93,7 +102,7 @@ const SignUp = () => {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h1" variant="h5" className={classes.header}>
           Sign up
         </Typography>
         <form onSubmit={onSubmit} noValidate>
@@ -160,16 +169,15 @@ const SignUp = () => {
             fullWidth
             disabled={loading}
             variant="contained"
-            color="primary"
             className={classes.submit}
           >
             Sign Up
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              {/* <Link href="#" variant="body2">
+              <Link onClick={(e) => history.push("/login")} variant="body2">
                 Already have an account? Sign in
-              </Link> */}
+              </Link>
             </Grid>
           </Grid>
         </form>
